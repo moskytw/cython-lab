@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-import signal
+from os import fork, kill
+from signal import SIGTERM
 from time import sleep
 
 def parent():
@@ -16,7 +16,7 @@ def child():
 
 if __name__ == '__main__':
 
-    chld_pid = os.fork()
+    chld_pid = fork()
 
     if chld_pid < 0:
         print "Can't fork."
@@ -24,4 +24,4 @@ if __name__ == '__main__':
         child()
     else:
         parent()
-        os.kill(chld_pid, signal.SIGTERM)
+        kill(chld_pid, SIGTERM)
