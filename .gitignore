@@ -2,4 +2,5 @@
 a.out
 
 *.c
+!test_*.c
 *.so
