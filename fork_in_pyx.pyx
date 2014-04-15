@@ -6,9 +6,9 @@ cdef extern from "unistd.h":
 
 cdef extern from "signal.h":
     int kill(int, int)
+    int SIGTERM
 
 from time import sleep
-from signal import SIGTERM
 
 def parent():
     print "It is annoying, right? Press 'y' to exit."
