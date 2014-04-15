@@ -3,7 +3,7 @@
 
 int main(int argc, const char *argv[]) {
 
-    assert(sizeof(int)== 4);
+    assert(sizeof(int) == 4);
     printf("sizeof int -> %lu\n", sizeof(int));
     // -2147483648 ~ 2147483647 if 32-bit int
 
