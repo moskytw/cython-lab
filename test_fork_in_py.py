@@ -11,13 +11,13 @@ def parent():
         pass
 
 def child():
-    sleep(0.5)
-    print 'Hi, there!'
+    while 1:
+        sleep(0.5)
+        print 'Hi, there!'
 
 if __name__ == '__main__':
 
     chld_pid = fork()
-
     if chld_pid < 0:
         print "Can't fork."
     elif chld_pid == 0:
