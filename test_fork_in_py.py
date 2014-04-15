@@ -17,11 +17,11 @@ def child():
 
 if __name__ == '__main__':
 
-    chld_pid = fork()
-    if chld_pid < 0:
+    child_pid = fork()
+    if child_pid < 0:
         print "Can't fork."
-    elif chld_pid == 0:
+    elif child_pid == 0:
         child()
     else:
         parent()
-        kill(chld_pid, SIGTERM)
+        kill(child_pid, SIGTERM)
