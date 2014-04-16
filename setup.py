@@ -6,7 +6,5 @@ from Cython.Build import cythonize
 
 setup(
     name = 'cython-lab',
-    # cythonize accepts a list
-    # pydoc Cython.Build.cythonize
     ext_modules = cythonize('*.pyx'),
 )
