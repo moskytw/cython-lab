@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import lib_in_pyx
 cimport lib_in_pyx # needs lib_in_pyx.pxd
 

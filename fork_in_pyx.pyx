@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 cdef extern from "unistd.h":
     int fork()
 

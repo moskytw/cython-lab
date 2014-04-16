@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 def say_hello(name=None):
     '''Tests calling C function in pyx.
 
