@@ -12,3 +12,9 @@ def say_hello(name=None):
 cdef say_hello_in_c(char* name='World'):
     '''Implements a function in C.'''
     return 'Hello, %s!' % name
+
+
+cpdef say_hello_by_cpdef(char* name='World'):
+    '''Implements a function by cpdef.'''
+    return 'Hello, %s!' % name
+

@@ -9,6 +9,9 @@ print lib_in_pyx.say_hello()
 print lib_in_pyx.say_hello('Mosky')
 print
 
+print lib_in_pyx.say_hello_by_cpdef()
+print lib_in_pyx.say_hello_by_cpdef('Mosky')
+print
 
 # .py only can access Python functions
 
