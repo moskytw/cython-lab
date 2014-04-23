@@ -1,5 +1,3 @@
-from cython import sizeof
-
 def main():
 
     assert sizeof(int) == 4
