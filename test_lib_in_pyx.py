@@ -9,10 +9,6 @@ print lib_in_pyx.say_hello()
 print lib_in_pyx.say_hello('Mosky')
 print
 
-print lib_in_pyx.say_hello_by_cpdef()
-print lib_in_pyx.say_hello_by_cpdef('Mosky')
-print
-
 # .py only can access Python functions
 
 # ``cimport`` is Cython's statement
@@ -23,7 +19,10 @@ print
 #print lib_in_pyx.say_hello_in_c('Mosky')
 # -> AttributeError
 
-
 # but .pyx can access C functions defined in other file and exposed by .pyd
+
+print lib_in_pyx.say_hello_by_cpdef()
+print lib_in_pyx.say_hello_by_cpdef('Mosky')
+print
 
 import use_lib_in_pyx
