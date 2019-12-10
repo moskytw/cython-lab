@@ -5,4 +5,4 @@ cdef struct Point:
 def main():
     d = {'x': 10, 'y': 20}
     cdef Point p = d
-    print p.get('z')
+    print(p.get('z'))

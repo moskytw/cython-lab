@@ -8,8 +8,8 @@ cdef extern from "signal.h":
 from time import sleep
 
 def parent():
-    print "It is annoying, right? Press 'y' to exit."
-    while raw_input() != 'y':
+    print("It is annoying, right? Press 'y' to exit.")
+    while input() != 'y':
         pass
 
 def child():
@@ -21,7 +21,7 @@ def main():
 
     cdef int child_pid = fork()
     if child_pid < 0:
-        print "Can't fork."
+        print("Can't fork.")
     elif child_pid == 0:
         child()
     else:
