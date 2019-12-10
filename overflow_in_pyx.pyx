@@ -9,5 +9,5 @@ def main():
     print('i ->', i)
 
     i += 1
-    assert(i == -2147483648);
+    assert(i == -2147483648)
     print('i ->', i)

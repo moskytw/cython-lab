@@ -17,4 +17,3 @@ cdef say_hello_in_c(char* name=b'World'):
 cpdef say_hello_by_cpdef(char* name=b'World'):
     '''Implements a function by cpdef.'''
     return 'Hello, {}!'.format(name)
-
