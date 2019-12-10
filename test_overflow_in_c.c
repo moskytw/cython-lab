@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[])
+{
 
     assert(sizeof(int) == 4);
     printf("sizeof int -> %lu\n", sizeof(int));
