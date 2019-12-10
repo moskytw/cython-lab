@@ -6,7 +6,7 @@
 import lib_in_pyx
 
 print(lib_in_pyx.say_hello())
-print(lib_in_pyx.say_hello(b'Mosky'))
+print(lib_in_pyx.say_hello('Mosky'))
 print()
 
 
@@ -24,7 +24,7 @@ print()
 # but .pyx can access C functions defined in other file and exposed by .pyd
 
 print(lib_in_pyx.say_hello_by_cpdef())
-print(lib_in_pyx.say_hello_by_cpdef(b'Mosky'))
+print(lib_in_pyx.say_hello_by_cpdef('Mosky'))
 print()
 
 import use_lib_in_pyx  # noqa
