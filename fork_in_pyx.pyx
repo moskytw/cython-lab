@@ -19,7 +19,7 @@ def parent():
 def child():
     while 1:
         sleep(0.5)
-        print 'Hi, there!'
+        print('Hi, there!')
 
 
 def main():
