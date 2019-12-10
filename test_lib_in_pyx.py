@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 
 # the Python functions in lib_in_pyx (.so) are accessible
