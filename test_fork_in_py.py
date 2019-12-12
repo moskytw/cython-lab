@@ -6,7 +6,7 @@ from signal import SIGTERM
 from time import sleep
 
 
-def parent():
+def parent(child_pid):
     print("It is annoying, right? Press 'y' to exit.")
     while input() != 'y':
         pass
@@ -27,4 +27,4 @@ if __name__ == '__main__':
     elif child_pid == 0:
         child()
     else:
-        parent()
+        parent(child_pid)

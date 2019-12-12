@@ -10,7 +10,7 @@ cdef extern from "signal.h":
 from time import sleep  # noqa
 
 
-def parent():
+def parent(int child_pid):
     print("It is annoying, right? Press 'y' to exit.")
     while input() != 'y':
         pass
@@ -31,4 +31,4 @@ def main():
     elif child_pid == 0:
         child()
     else:
-        parent()
+        parent(child_pid)
