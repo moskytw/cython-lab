@@ -10,6 +10,7 @@ def parent():
     print("It is annoying, right? Press 'y' to exit.")
     while input() != 'y':
         pass
+    kill(child_pid, SIGTERM)
 
 
 def child():
@@ -27,4 +28,3 @@ if __name__ == '__main__':
         child()
     else:
         parent()
-        kill(child_pid, SIGTERM)

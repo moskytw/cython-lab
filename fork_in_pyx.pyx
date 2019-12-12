@@ -14,6 +14,7 @@ def parent():
     print("It is annoying, right? Press 'y' to exit.")
     while input() != 'y':
         pass
+    kill(child_pid, SIGTERM)
 
 
 def child():
@@ -31,4 +32,3 @@ def main():
         child()
     else:
         parent()
-        kill(child_pid, SIGTERM)
