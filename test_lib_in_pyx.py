@@ -1,30 +1,28 @@
 #!/usr/bin/env python
 
-
-# the Python functions in lib_in_pyx (.so) are accessible
-
 import lib_in_pyx
+import use_lib_in_pyx
 
-print(lib_in_pyx.say_hello())
-print(lib_in_pyx.say_hello('Mosky'))
-print()
-
-
-# .py only can access Python functions
+print('.py cannot call .pyx cdef:')
 
 # # ``cimport`` is Cython's statement
 # cimport lib_in_pyx
 # # -> SyntaxError
 
-# print(lib_in_pyx.say_hello_in_c())
-# print(lib_in_pyx.say_hello_in_c('Mosky'))
+# print(lib_in_pyx.say_hello_by_cdef())
+# print(lib_in_pyx.say_hello_by_cdef('Mosky'))
 # # -> AttributeError
 
+print()
 
-# but .pyx can access C functions defined in other file and exposed by .pyd
 
+print('.py calls .pyx cpdef:')
 print(lib_in_pyx.say_hello_by_cpdef())
 print(lib_in_pyx.say_hello_by_cpdef('Mosky'))
 print()
 
-import use_lib_in_pyx  # noqa
+print('.py calls .pyx def:')
+print(lib_in_pyx.say_hello_by_def())
+print(lib_in_pyx.say_hello_by_def('Mosky'))
+print()
+

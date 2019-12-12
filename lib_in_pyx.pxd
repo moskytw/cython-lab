@@ -1,2 +1,2 @@
-# exposes it for other .pyx
-cdef say_hello_in_c(name=?)
+# exposes it to other .pyx
+cdef say_hello_by_cdef(name=?)

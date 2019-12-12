@@ -1,19 +1,14 @@
-def say_hello(name=None):
-    '''Tests calling C function in pyx.
-
-    The C functions in same file can be accessed directly.'''
-
-    if name is None:
-        return say_hello_in_c()
-
-    return say_hello_in_c(name)
-
-
-cdef say_hello_in_c(name='World'):
-    '''Implements a function in C.'''
+cdef say_hello_by_cdef(name='World'):
     return 'Hello, {}!'.format(name)
 
 
 cpdef say_hello_by_cpdef(name='World'):
-    '''Implements a function by cpdef.'''
     return 'Hello, {}!'.format(name)
+
+
+def say_hello_by_def(name='World'):
+    return 'Hello, {}!'.format(name)
+
+
+def call_say_hello_by_cdef(name='World'):
+    return say_hello_by_cdef(name)
